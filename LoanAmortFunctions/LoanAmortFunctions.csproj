@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <AzureFunctionsVersion>v1</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.14" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LOANAMORT\LOANAMORT.cblproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MicroFocus.COBOL.Runtime">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Micro Focus\Visual COBOL\1.0\v4.0\MicroFocus.COBOL.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroFocus.COBOL.Runtime.Azure">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Micro Focus\Visual COBOL\1.0\v4.0\Azure\v2.9\MicroFocus.COBOL.Runtime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroFocus.COBOL.RuntimeServices">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Micro Focus\Visual COBOL\1.0\v4.0\MicroFocus.COBOL.RuntimeServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

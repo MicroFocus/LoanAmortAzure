@@ -1,0 +1,25 @@
+﻿<Window x:Class="AmortWPFClient.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Amortization Schedule" Height="525.397" Width="637.352">
+    <Grid Margin="0,0,-0.333,6.667">
+        <Button x:Name="btnAmort" Content="Amortization Schedule" HorizontalAlignment="Left" Margin="24,149,0,0" VerticalAlignment="Top" Width="161" Click="btnAmort_Click"/>
+        <TextBox x:Name="tbPrincipal" HorizontalAlignment="Left" Height="23" Margin="98,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="tbMonths" HorizontalAlignment="Left" Height="23" Margin="98,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="tbRate" HorizontalAlignment="Left" Height="23" Margin="98,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87"/>
+        <DataGrid x:Name="dgAmortdata" AlternatingRowBackground="Beige" AlternationCount="2" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="24,198,0,0" VerticalAlignment="Top" Height="248" Width="507">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Payment #" Binding="{Binding Path=PayDateNo}"/>
+                <DataGridTextColumn Width="*" Header="Payment" Binding="{Binding Path=Payment}"/>
+                <DataGridTextColumn Width="*" Header="Principal" Binding="{Binding Path=PrincipalPaid}"/>
+                <DataGridTextColumn Width="*" Header="Interest" Binding="{Binding Path=InterestPaid}"/>
+                <DataGridTextColumn Width="*"  Header="Balance" Binding="{Binding Path=Balance}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="label_Principal" Content="Principal" HorizontalAlignment="Left" Margin="19,24,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label x:Name="label_Copy" Content="Months" HorizontalAlignment="Left" Margin="19,64,0,0" VerticalAlignment="Top" Width="73"/>
+        <Label x:Name="label_Copy1" Content="Rate" HorizontalAlignment="Left" Margin="19,104,0,0" VerticalAlignment="Top" Width="45"/>
+        <Label x:Name="lblInterest" Visibility="Hidden" Content="Total Interest Paid:" HorizontalAlignment="Left" Margin="24,455,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label x:Name="lblTotInterest" Content="" HorizontalAlignment="Left" Margin="135,455,0,0" VerticalAlignment="Top" Width="85"/>
+    </Grid>
+</Window>
