@@ -8,20 +8,13 @@ $(document).ready(
 		function() {
 			$("#formApiEndpointInput").val(
 					localStorage.getItem("loanCalculatorApiEndpoint"));
-
-			$("#buttonApiEndpointEdit").on(
-					"click",
-					function(event) {
-						event.preventDefault();
-						var isEditing = $(this).find('span:first').hasClass(
-								"glyphicon-floppy-disk");
-						toggleApiEndpointEditing(isEditing);
-					});
-
+	
 			enableDisableFormSubmit(false);
 
 			$("#buttonCalculate").on("click", function(event) {
-				event.preventDefault();
+                event.preventDefault();
+                localStorage.setItem("loanCalculatorApiEndpoint", $("#formApiEndpointInput")
+                    .val());
 				calculate();
 			});
 
@@ -248,18 +241,4 @@ function renderTable(tableData) {
 		table.append(tbody);
 	}
 	$("#amortizationSchedule").empty().append(table);
-}
-
-function toggleApiEndpointEditing(isEditing) {
-	var formApiEndpointInput = $("#formApiEndpointInput");
-	if (isEditing) {
-		localStorage.setItem("loanCalculatorApiEndpoint", formApiEndpointInput
-				.val());
-		formApiEndpointInput.attr("readonly", true);
-	} else {
-		formApiEndpointInput.attr("readonly", false);
-		formApiEndpointInput.select();
-	}
-	$("#buttonApiEndpointEditGlyphIcon").toggleClass(
-			'glyphicon-pencil glyphicon-floppy-disk');
 }

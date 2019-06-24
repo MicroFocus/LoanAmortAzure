@@ -19,8 +19,8 @@
     <div class="jumbotron">
         <h2>Amortization Schedule Calculator</h2>
         <p>
-            This amortization calculator will show you how much of your monthly payment will go toward the principal and how much will go toward the interest.<br>
-            The calculator uses COBOL JVM code that runs in the Cloud and returns you the details. Before using it you should setup the API Endpoint that is the URL of an AWS Lambda or an Azure function.
+         This form will use a COBOL API to calculate monthly payments. <br />
+         Ensure you change the endpoint URL below to reference either your local or serverless API.
         </p>
     </div>
     <div class="row">
@@ -31,12 +31,7 @@
                         <div class="form-group">
                             <label for="formApiEndpoint" class="control-label">API Endpoint</label>
                             <span class="input-group">
-                                <input readonly placeholder="Enter API Endpoint" name="apiEndpoint" type="text" id="formApiEndpointInput" class="form-control" value="">
-                                <span class="input-group-btn">
-                                    <button aria-label="Edit" type="button" id="buttonApiEndpointEdit" class="btn btn-default">
-                                        <span id="buttonApiEndpointEditGlyphIcon" class="glyphicon glyphicon-pencil"></span>
-                                    </button>
-                                </span>
+                                <input placeholder="Enter API Endpoint as https://..." name="apiEndpoint" type="text" id="formApiEndpointInput" class="form-control" value=""> 
                             </span>
                         </div>
                         <div class="form-group" id="formPrincipal">
