@@ -18,7 +18,7 @@ A WPF based UI
 ## Software Requirements
 1. Visual Studio 2017 or 2019
 2. Azure Workflow for Visual Studio
-3. Visual COBOL for Visual Studio 5.0 - https://www.microfocus.com/visualcobol
+3. OpenText Micro Focus(TM) Visual COBOL for Visual Studio - https://www.microfocus.com/visualcobol
 
 ## Other Prerequisites
 Azure account/Microsoft account
